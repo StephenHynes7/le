@@ -44,6 +44,9 @@ done
 $CURL $DAEMON_DL_LOC
 sed -i -e 's/python2/python/' *.py
 
+printf "Installing Python dependencies"
+pip install formats
+
 printf "Copying files...\n"
 mkdir -p "$INSTALL_DIR"/logentries || true
 mv *.py "$INSTALL_DIR"/logentries
